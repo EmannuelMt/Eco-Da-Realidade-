@@ -1,0 +1,219 @@
+.enigmas-section {
+  position: relative;
+  background: linear-gradient(
+    rgba(23, 11, 36, 0.95),
+    rgba(23, 11, 36, 0.95)
+  );
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  background: linear-gradient(to right, #b56aff, #e94560);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.view-all {
+  display: inline-flex;
+  align-items: center;
+  color: #b56aff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.view-all:hover {
+  color: #e94560;
+  transform: translateX(3px);
+}
+
+.section-subtitle {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.enigmas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.enigma-card {
+  position: relative;
+  background: rgba(35, 20, 59, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1.8rem;
+  border: 1px solid rgba(106, 44, 173, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.enigma-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.enigma-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.enigma-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(106, 44, 173, 0.2);
+  border-radius: 50%;
+  font-size: 1.3rem;
+  color: #b56aff;
+  flex-shrink: 0;
+}
+
+.enigma-meta {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+
+.difficulty {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #e94560;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.category {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.solved-badge,
+.unsolved-badge {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.solved-badge {
+  background: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+}
+
+.unsolved-badge {
+  background: rgba(233, 69, 96, 0.2);
+  color: #e94560;
+}
+
+.enigma-card h3 {
+  font-size: 1rem;
+  color: #b56aff;
+  margin-bottom: 0.3rem;
+}
+
+.enigma-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: white;
+  line-height: 1.4;
+}
+
+.enigma-card p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.enigma-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #b56aff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.enigma-link:hover {
+  color: #e94560;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #6a2cad 0%, #e94560 100%);
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(106, 44, 173, 0.4);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(106, 44, 173, 0.6);
+}
+
+.enigma-decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(
+    circle,
+    rgba(181, 106, 255, 0.1) 0%,
+    transparent 70%
+  );
+  z-index: -1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .view-all {
+    margin-top: 0.5rem;
+  }
+  
+  .enigmas-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .enigma-card {
+    padding: 1.5rem;
+  }
+}

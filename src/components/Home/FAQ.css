@@ -1,0 +1,17 @@
+.faq-grid {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 2rem;
+  background-color: var(--primary-dark);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--accent-red);
+}
+
+.faq-item h3 {
+  color: var(--accent-blue);
+  margin-bottom: 0.5rem;
+}
